@@ -3,7 +3,7 @@ require "multi_json"
 module OliveBranch
   class Checks
     def self.content_type_check(content_type)
-      content_type =~ /application\/json/
+      content_type =~ /application\/json/ || /application\/x-www-form-urlencoded/
     end
 
     def self.default_exclude(env)
